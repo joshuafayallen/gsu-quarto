@@ -1,0 +1,47 @@
+# Introduction 
+
+```{r}
+#| label: load_packages
+#| include: false
+library(tidyverse)
+
+```
+
+
+
+Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.
+
+## Data
+
+Included in this template is a file called `sales.csv`. This contains quarterly data on Sales and Advertising budget for a small company over the period 1981--2005. It also contains the GDP (gross domestic product) over the same period. All series have been adjusted for inflation. We can load in this data set using the following code:
+
+```{r}
+#| label: load_data
+#| echo: true
+#| tbl-cap: this is the data
+library(palmerpenguins)
+
+penguins |>
+select(species, island) |>
+head(2) |>
+knitr::kable(format = "latex")
+
+
+```
+
+Any data you use in your thesis can go into the `data` directory. The data should be in exactly the format you obtained it. Do no editing or manipulation of the data prior to including it in the `data` directory. Any data munging should be scripted and form part of your thesis files (possibly hidden in the output).
+
+## Figures`
+
+@fig-pengs shows time plots of the data we just loaded. Notice how figure captions and references work. Chunk names can be used as figure labels with `fig-` prefixed. Never manually type figure numbers, as they can change when you add or delete figures. This way, the figure numbering is always correct.
+
+```{r}
+#| label: fig-pengs
+#| fig-cap: "Quarterly sales, advertising and GDP data."
+
+
+ggplot(penguins, aes(body_mass_g)) + geom_histogram()
+
+```
+
+

@@ -1,0 +1,297 @@
+\documentclass[12pt]{report}
+
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{bookmark} % added to see what happens
+\usepackage{framed} % added to see what happens. These two packages were in response to some errors that latex kept throwing me 
+% when compiling the test templates
+% this is to see if I can sneak in using cochineal
+
+
+% use of color
+\usepackage{xcolor}
+
+
+\providecommand{\keywords}[1]{\textbf{\textit{Keywords---}}#1}
+
+
+\providecommand{\titlediss}{$for(title)$$title$$endfor$}
+% name in caps
+\providecommand{\writerUpper}{$for(uppername)$$uppername$$endfor$}
+% name normal
+\providecommand{\writerLower}{$for(normname)$$normname$$endfor$}
+\providecommand{\chair}{$for(chair)$$chair$$endfor$}
+
+\providecommand{\committeeOne}{$for(memberone)$$memberone$$endfor$}
+\providecommand{\committeeTwo}{$for(membertwo)$$membertwo$$endfor$}
+%%% if you have more than one committee member just add that right here 
+\providecommand{\gradMonth}{$for(month)$$month$$endfor$}
+\providecommand{\gradYear}{$for(year)$$year$$endfor$}
+
+\renewenvironment{abstract}{
+\begin{center}
+{ABSTRACT \vspace{0.2in}}
+\end{center}
+}{}
+
+\providecommand{\keywordOne}{keyword1} 
+\providecommand{\keywordTwo}{keyword2} 
+
+\providecommand{\Chapter}[2]{\chapter[#1]{#1 \\ \begin{flushleft} \footnotesize \textit{#2} \normalsize \end{flushleft}}} 
+
+% renames 'Contents' to 'Table of Contents'
+\renewcommand{\contentsname}{Table of Contents}
+
+
+
+% allows use of citet and citep
+
+% make sure you are citing everything listed!!! comment out to prevent latex getting mad about unlabelled equations and figures
+%\usepackage{refcheck}
+% removes commas after et al. in \citep to match AAS and MNRAS formatting
+%\setcitestyle{aysep={}}
+
+$if(natbib)$
+\usepackage{natbib}
+\bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
+\usepackage[strings]{underscore} % protect underscores in most circumstances
+$endif$
+
+$if(biblatex)$
+\usepackage{csquotes}
+\usepackage[natbib,authordate,backend=biber,sorting=nyt]{biblatex-chicago}
+$for(bibliography)$
+\addbibresource{$bibliography$}
+$endfor$
+$endif$
+$if(listings)$
+\usepackage{listings}
+$endif$
+
+
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
+% for figures
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{longtable}
+
+% appendices for chapters
+\usepackage{appendix}
+
+% allows rotations
+\usepackage{pdflscape}
+
+% allows for use of \cmidrule
+\usepackage{booktabs}
+
+% for caption stuff
+\usepackage{caption}
+
+% line spacing, whatever
+\usepackage{microtype}
+
+% float control
+\usepackage{float}
+
+% sets 1 inch margins
+\usepackage[margin=1in]{geometry}
+
+% binding offset
+% ONLY USE ONCE DOCUMENT IS READY FOR PRINTING!
+% CHANGES PAGE LAYOUT!
+%\usepackage[margin=1in, twoside, bindingoffset=0.5in]{geometry}
+
+% sets spacing to double spaced
+\usepackage{setspace}
+\doublespacing
+
+% makes section (etc.) titles 12 pt font
+\usepackage{titlesec}
+\titleformat*{\section}{\fontsize{12}{15}\bfseries}
+\titleformat*{\subsection}{\fontsize{12}{15}\bfseries}
+\titleformat*{\subsubsection}{\fontsize{12}{15}\bfseries}
+
+% sets depth of subsections, match this with how deep you go above
+\setcounter{secnumdepth}{3}
+
+% makes chapter titles 12 pt font
+\titleformat{\chapter}[display]
+{\normalfont \bfseries\centering}
+{\chaptertitlename\ \thechapter}{12pt}
+{\normalfont \bfseries\centering}
+
+% hyper ref without coloring the links
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    pdfkeywords = {$if(keyword)$$keyword$$endif$},
+    urlcolor=black,
+    linktoc=all}
+
+% prevent widows and orphans, or at least makes LaTeX try really hard to do so
+\usepackage[all,defaultlines=2]{nowidow}
+
+% lets just hard code this for now 
+
+
+\begin{document}
+
+
+
+\begin{center}
+\parbox[]{\textwidth}{\setstretch{2}\centering\titlediss}
+\end{center}
+\vspace{0.4in}
+\centerline{by}
+\vspace*{0.5in}
+\centerline{$for(uppername)$$uppername$$endfor$}
+\vspace*{0.5in}
+\centerline{Under the Direction of $for(chair)$$chair$$endfor$, PhD}
+\vspace{1.0in}
+
+
+
+\centerline{A Dissertation Submitted in Partial Fulfillment of the Requirements of }
+\centerline{Doctor of Philosophy}
+\centerline{in the College of Arts and Sciences}
+\centerline{Georgia State University}
+\centerline{$for(year)$$year$$endfor$}
+\newpage
+
+\newpage 
+
+\begin{abstract}
+
+$abstract$
+
+
+\end{abstract} 
+\begin{singlespace}
+  \vspace{0.5in}
+  \noindent INDEX WORDS:
+  \hspace{0.2in}
+  \parbox[t]{4.5in}{$for(keywords)$$keywords$$endfor$}
+\end{singlespace}
+
+\newpage
+
+\vspace*{0.7\textheight}
+\begin{center}
+  \parbox[]{\textwidth}{\setstretch{1}
+    \begin{center}
+      Copyright by \\
+      $for(normname)$$normname$$endfor$ \\
+      $for(year)$$year$$endfor$
+    \end{center}}
+\end{center}
+
+\newpage
+
+% FRONT MATTER
+
+
+
+
+
+\begin{center}
+  \parbox[]{\textwidth}{\setstretch{2}\centering \titlediss}
+  \end{center}
+  
+  \vspace*{0.5in}
+  \centerline{by}
+  \vspace*{0.5in}
+  \centerline{$for(uppername)$$uppername$$endfor$}
+  \vspace*{1in}
+  
+  \hspace{0.33\textwidth}
+  \begin{minipage}[t]{0.33\textwidth}
+  Committee Chair:\\
+  Committee: \\
+  \end{minipage}%
+  \begin{minipage}[t]{0.33\textwidth}
+  \begin{flushright}
+  $for(chair)$$chair$$endfor$ \\
+  $for(memberone)$$memberone$$endfor$ \\
+  $for(membertwo)$$membertwo$$endfor$ \\
+  \end{flushright}
+  \end{minipage}%
+  \vspace{1cm}
+  
+  \parbox[b]{\textwidth}{\setstretch{2}
+  Electronic Version Approved:\\\\\\
+  Office of Graduate Studies\\
+  College of Arts and Sciences\\
+  Georgia State University\\
+  $for(month)$$month$$endfor$ $for(year)$$year$$endfor$
+  }
+
+
+\pagenumbering{roman}
+\setcounter{page}{4}
+  
+\chapter*{DEDICATION}
+  I dedicate this dissertation to the haters 
+
+\chapter*{ACKNOWLEDGEMENTS}
+
+  I would like to thank.. My Dog
+
+
+% table of contents %
+\tableofcontents
+\newpage
+
+% list of tables %
+\phantomsection
+\addcontentsline{toc}{chapter}{\texorpdfstring{\listtablename \dotfill}{\listtablename}}
+\listoftables
+\newpage
+
+% list of figures %
+\phantomsection
+\addcontentsline{toc}{chapter}{\texorpdfstring{\listtablename \dotfill}{\listtablename}}
+\listoffigures
+\newpage
+
+% CHAPTERS %
+\cleardoublepage
+\pagenumbering{arabic}
+
+\newpage
+
+$body$
+
+% BACK MATTER
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliography} 
+
+\newpage
+
+
+
+$if(natbib)$
+	$if(bibliography)$
+	$if(biblio-title)$
+	$if(book-class)$
+	\renewcommand\bibname{$biblio-title$}
+	$else$
+	\renewcommand\refname{$biblio-title$}
+	$endif$
+	$endif$
+	\bibliography{$for(bibliography)$$bibliography$$sep$,$endfor$}
+	$endif$
+	$endif$
+	$if(biblatex)$
+	\printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
+	$endif$
+	$for(include-after)$
+	$include-after$
+	$endfor$
+
+\end{document}

@@ -1,0 +1,9 @@
+title: GSU Dissertaion Template
+author: Josh Allen
+version: 0.1.0
+contributes:
+  formats:
+    pdf:
+      template: gsudiss.tex
+      biblio-config: false
+      indent: true

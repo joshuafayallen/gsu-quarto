@@ -1,0 +1,33 @@
+project:
+  type: book
+
+book:
+  search: false
+  chapters:
+    - index.qmd
+    - "01-chap1.qmd"
+    - "02-chap2.qmd"
+
+bibliography: thesisrefs.bib
+cite-method: biblatex
+biblio-style: apa
+fig-height: 3.8
+fig-width: 6.3
+execute:
+  freeze: auto
+  echo: false
+
+format: 
+  gsuthesis-pdf: 
+    keywords: "These, Are, Tests"
+    chair: "Ellen Ripley"
+    memberone: "Bruce Banner"
+    membertwo: "Indiana Jones"
+    month: "May"
+    uppername: "JOSH ALLEN"
+    normname: "Josh Allen"
+    title: "Testing the Effect of something on something else"
+    year: 2022
+    abstract: |
+      add your abstract in the quarto yml file for now 
+  
