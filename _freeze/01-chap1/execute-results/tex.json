@@ -1,0 +1,20 @@
+{
+  "hash": "a2cfa03beb75efb67693576c33feddaf",
+  "result": {
+    "markdown": "# Introduction \n\n\n\n\n\n\n\nDo you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.\n\n## Data\n\nIncluded in this template is a file called `sales.csv`. This contains quarterly data on Sales and Advertising budget for a small company over the period 1981--2005. It also contains the GDP (gross domestic product) over the same period. All series have been adjusted for inflation. We can load in this data set using the following code:\n\n\n::: {.cell tbl-cap='this is the data'}\n\n```{.r .cell-code}\nlibrary(palmerpenguins)\n\npenguins |>\nselect(species, island) |>\nhead(2) |>\nknitr::kable(format = \"latex\")\n```\n\n::: {.cell-output-display}\n\\begin{tabular}{l|l}\n\\hline\nspecies & island\\\\\n\\hline\nAdelie & Torgersen\\\\\n\\hline\nAdelie & Torgersen\\\\\n\\hline\n\\end{tabular}\n:::\n:::\n\n\nAny data you use in your thesis can go into the `data` directory. The data should be in exactly the format you obtained it. Do no editing or manipulation of the data prior to including it in the `data` directory. Any data munging should be scripted and form part of your thesis files (possibly hidden in the output).\n\n## Figures`\n\n@fig-pengs shows time plots of the data we just loaded. Notice how figure captions and references work. Chunk names can be used as figure labels with `fig-` prefixed. Never manually type figure numbers, as they can change when you add or delete figures. This way, the figure numbering is always correct.\n\n\n::: {.cell}\n::: {.cell-output .cell-output-stderr}\n```\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n```\n:::\n\n::: {.cell-output .cell-output-stderr}\n```\nWarning: Removed 2 rows containing non-finite values (`stat_bin()`).\n```\n:::\n\n::: {.cell-output-display}\n![Quarterly sales, advertising and GDP data.](01-chap1_files/figure-pdf/fig-pengs-1.pdf){#fig-pengs}\n:::\n:::\n",
+    "supporting": [
+      "01-chap1_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {
+      "knitr": [
+        "{\"type\":\"list\",\"attributes\":{},\"value\":[]}"
+      ]
+    },
+    "preserve": null,
+    "postProcess": false
+  }
+}
