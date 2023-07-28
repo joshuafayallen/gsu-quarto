@@ -1,2 +1,12 @@
-### place holder
+:::{.unnumbered .unlisted}
 
+# Dedication {-}
+
+
+this is dedicated to the haters 
+
+:::
+
+\setcounter{page}{4}
+\pagenumbering{roman}
+\pagestyle{fancy}

@@ -1,9 +1,15 @@
 title: GSU Dissertaion Template
 author: Josh Allen
-version: 0.1.0
+version: 1.0.0
 contributes:
   formats:
     pdf:
+      pdfengine: xelatex
+      include-in-header: include-in-header.tex
+      keep-tex: true
       template: gsudiss.tex
       biblio-config: false
+      cite-method: biblatex
+      biblatexoptions:
+        - backend=biber
       indent: true

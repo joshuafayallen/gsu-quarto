@@ -1,0 +1,18 @@
+
+
+:::{.unnumbered .unlisted}
+
+# Abreviations  {-}
+
+
+abc = the abcs 
+
+
+:::
+
+
+\cleardoublepage
+\pagenumbering{arabic}
+\markright{\thepage}
+\newpage
+\pagenumbering{arabic}

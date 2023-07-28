@@ -1,0 +1,265 @@
+\documentclass[12pt]{report}
+
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{bookmark} % added to see what happens
+\usepackage{framed} % added to see what happens. These two packages were in response to some errors that latex kept throwing me
+% when compiling the test templates
+% this is to see if I can sneak in using cochineal
+
+
+% use of color
+\usepackage{xcolor}
+
+
+\providecommand{\keywords}[1]{\textbf{\textit{Keywords---}}#1}
+
+
+\providecommand{\titlediss}{}
+% name in caps
+\providecommand{\writerUpper}{}
+% name normal
+\providecommand{\writerLower}{}
+\providecommand{\chair}{}
+
+\providecommand{\committeeOne}{}
+\providecommand{\committeeTwo}{}
+%%% if you have more than one committee member just add that right here
+\providecommand{\gradMonth}{}
+\providecommand{\gradYear}{}
+
+\renewenvironment{abstract}{
+\begin{center}
+{ABSTRACT \vspace{0.2in}}
+\end{center}
+}{}
+
+\providecommand{\keywordOne}{keyword1}
+\providecommand{\keywordTwo}{keyword2}
+
+\providecommand{\Chapter}[2]{\chapter[#1]{#1 \\ \begin{flushleft} \footnotesize \textit{#2} \normalsize \end{flushleft}}}
+
+% renames 'Contents' to 'Table of Contents'
+\renewcommand{\contentsname}{Table of Contents}
+
+
+
+% allows use of citet and citep
+
+% make sure you are citing everything listed!!! comment out to prevent latex getting mad about unlabelled equations and figures
+%\usepackage{refcheck}
+% removes commas after et al. in \citep to match AAS and MNRAS formatting
+%\setcitestyle{aysep={}}
+
+
+
+
+% for figures
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{longtable}
+
+% appendices for chapters
+\usepackage{appendix}
+
+% allows rotations
+\usepackage{pdflscape}
+
+% allows for use of \cmidrule
+\usepackage{booktabs}
+
+% for caption stuff
+\usepackage{caption}
+
+% line spacing, whatever
+\usepackage{microtype}
+
+% float control
+\usepackage{float}
+
+% sets 1 inch margins
+\usepackage[margin=1in]{geometry}
+
+% binding offset
+% ONLY USE ONCE DOCUMENT IS READY FOR PRINTING!
+% CHANGES PAGE LAYOUT!
+%\usepackage[margin=1in, twoside, bindingoffset=0.5in]{geometry}
+
+% sets spacing to double spaced
+\usepackage{setspace}
+\doublespacing
+
+% makes section (etc.) titles 12 pt font
+\usepackage{titlesec}
+\titleformat*{\section}{\fontsize{12}{15}\bfseries}
+\titleformat*{\subsection}{\fontsize{12}{15}\bfseries}
+\titleformat*{\subsubsection}{\fontsize{12}{15}\bfseries}
+
+% sets depth of subsections, match this with how deep you go above
+\setcounter{secnumdepth}{3}
+
+% makes chapter titles 12 pt font
+\titleformat{\chapter}[display]
+{\normalfont \bfseries\centering}
+{\chaptertitlename\ \thechapter}{12pt}
+{\normalfont \bfseries\centering}
+
+% hyper ref without coloring the links
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    pdfkeywords = {},
+    urlcolor=black,
+    linktoc=all}
+
+% prevent widows and orphans, or at least makes LaTeX try really hard to do so
+\usepackage[all,defaultlines=2]{nowidow}
+
+% lets just hard code this for now
+
+
+\begin{document}
+
+
+
+\begin{center}
+\parbox[]{\textwidth}{\setstretch{2}\centering\titlediss}
+\end{center}
+\vspace{0.4in}
+\centerline{by}
+\vspace*{0.5in}
+\centerline{}
+\vspace*{0.5in}
+\centerline{Under the Direction of , PhD}
+\vspace{1.0in}
+
+
+
+\centerline{A Dissertation Submitted in Partial Fulfillment of the Requirements of }
+\centerline{Doctor of Philosophy}
+\centerline{in the College of Arts and Sciences}
+\centerline{Georgia State University}
+\centerline{}
+\newpage
+
+\newpage
+
+\begin{abstract}
+
+
+
+
+\end{abstract}
+\begin{singlespace}
+  \vspace{0.5in}
+  \noindent INDEX WORDS:
+  \hspace{0.2in}
+  \parbox[t]{4.5in}{}
+\end{singlespace}
+
+\newpage
+
+\vspace*{0.7\textheight}
+\begin{center}
+  \parbox[]{\textwidth}{\setstretch{1}
+    \begin{center}
+      Copyright by \\
+       \\
+      
+    \end{center}}
+\end{center}
+
+\newpage
+
+% FRONT MATTER
+
+
+
+
+
+\begin{center}
+  \parbox[]{\textwidth}{\setstretch{2}\centering \titlediss}
+  \end{center}
+
+  \vspace*{0.5in}
+  \centerline{by}
+  \vspace*{0.5in}
+  \centerline{}
+  \vspace*{1in}
+
+  \hspace{0.33\textwidth}
+  \begin{minipage}[t]{0.33\textwidth}
+  Committee Chair:\\
+  Committee: \\
+  \end{minipage}%
+  \begin{minipage}[t]{0.33\textwidth}
+  \begin{flushright}
+   \\
+   \\
+   \\
+  \end{flushright}
+  \end{minipage}%
+  \vspace{1cm}
+
+  \parbox[b]{\textwidth}{\setstretch{2}
+  Electronic Version Approved:\\\\\\
+  Office of Graduate Studies\\
+  College of Arts and Sciences\\
+  Georgia State University\\
+   
+  }
+
+
+\pagenumbering{roman}
+\setcounter{page}{4}
+
+\chapter*{DEDICATION}
+  These need to be edited in the gsudiss.tex file
+
+\chapter*{ACKNOWLEDGEMENTS}
+
+  I would like to thank.. My Dog
+
+
+% table of contents %
+\tableofcontents
+\newpage
+
+% list of tables %
+\phantomsection
+\addcontentsline{toc}{chapter}{\texorpdfstring{\listtablename \dotfill}{\listtablename}}
+\listoftables
+\newpage
+
+% list of figures %
+\phantomsection
+\addcontentsline{toc}{chapter}{\texorpdfstring{\listtablename \dotfill}{\listtablename}}
+\listoffigures
+\newpage
+
+% CHAPTERS %
+\cleardoublepage
+\pagenumbering{arabic}
+
+\newpage
+
+\hypertarget{acknowledgements}{%
+\section*{Acknowledgements}\label{acknowledgements}}
+\addcontentsline{toc}{section}{Acknowledgements}
+
+I would like to thank my pet goldfish for \ldots{}
+
+% BACK MATTER
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliography}
+
+\newpage
+
+
+
+		
+\end{document}

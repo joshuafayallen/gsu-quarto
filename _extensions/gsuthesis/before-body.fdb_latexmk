@@ -1,0 +1,16 @@
+# Fdb version 4
+["pdflatex"] 1689889444 "/Users/josh/Library/CloudStorage/Dropbox/gsu-quarto-dissertation-template/_extensions/gsuthesis/before-body.tex" "before-body.pdf" "before-body" 1689889445 2
+  "/Users/josh/Library/CloudStorage/Dropbox/gsu-quarto-dissertation-template/_extensions/gsuthesis/before-body.tex" 1689889444 6329 fbe27d2768c380473be64871f4468bdf ""
+  "/Users/josh/Library/TinyTeX/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1688571735 1328 c834bbb027764024c09d3d2bf908b5f0 ""
+  "/Users/josh/Library/TinyTeX/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1688571735 1324 c910af8c371558dc20f2d7822f66fe64 ""
+  "/Users/josh/Library/TinyTeX/texmf-dist/web2c/texmf.cnf" 1688571734 40967 d940221f8762fd5848760382d97d1226 ""
+  "/Users/josh/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1689877728 514362 b680d28693f511bb07de0960759328e8 ""
+  "/Users/josh/Library/TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt" 1689877737 6770811 cc2813e616219cf5172fe19daa004fe6 ""
+  "/Users/josh/Library/TinyTeX/texmf.cnf" 1688571733 637 edd806fb06a89761a6034e1968af9017 ""
+  "before-body.aux" 1689889444 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "before-body.tex" 1689889444 6329 fbe27d2768c380473be64871f4468bdf ""
+  (generated)
+  "before-body.aux"
+  "before-body.log"
+  "before-body.pdf"
+  (rewritten before read)

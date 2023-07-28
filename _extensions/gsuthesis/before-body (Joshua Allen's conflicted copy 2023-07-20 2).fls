@@ -1,0 +1,10 @@
+PWD /Users/josh/Library/CloudStorage/Dropbox/gsu-quarto-dissertation-template/_extensions/gsuthesis
+INPUT /Users/josh/Library/TinyTeX/texmf.cnf
+INPUT /Users/josh/Library/TinyTeX/texmf-dist/web2c/texmf.cnf
+INPUT /Users/josh/Library/TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT /Users/josh/Library/CloudStorage/Dropbox/gsu-quarto-dissertation-template/_extensions/gsuthesis/before-body.tex
+OUTPUT before-body.log
+INPUT /Users/josh/Library/TinyTeX/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /Users/josh/Library/TinyTeX/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+OUTPUT before-body.pdf
+INPUT /Users/josh/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map

@@ -1,0 +1,36 @@
+
+:::{.unnumbered .unlisted}
+
+# Acknowledgements {-}
+
+I would like to thank my pet goldfish for ...
+
+:::
+
+
+
+
+
+
+
+
+
+\pagenumbering{roman}
+\setcounter{page}{4}
+
+
+
+\tableofcontents
+\newpage
+
+
+\phantomsection
+\addcontentsline{toc}{chapter}{\texorpdfstring{\listtablename \dotfill}{\listtablename}}
+\listoftables
+\newpage
+
+
+\phantomsection
+\addcontentsline{toc}{chapter}{\texorpdfstring{\listtablename \dotfill}{\listtablename}}
+\listoffigures
+\newpage
